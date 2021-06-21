@@ -47,8 +47,7 @@ def unique_test(corp, unique_dict):
 	"""
 	Tests whether any work in an nltk plaintext corpus, corp, contains any
 	string in dictionary unique_dict. Prints warning to console for
-	duplicate words. Returns a set of tested unique words. Is ridiculously
-	slow at O(n^3) (two for loops and "in" keyword on a list).
+	duplicate words. Returns a set of tested unique words.
 	"""
 	cleanup_list = [l for subl in unique_dict.values() for l in subl] 	
 	for idx, word in enumerate(cleanup_list):
