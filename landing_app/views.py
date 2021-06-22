@@ -8,9 +8,10 @@ class LandingPageView(TemplateView):
 
 def ibsen_view(request):
 	if request.method == 'GET':	
-		test1, test2, test3 = word_picker()
-	return render(request, 'landing_app/base.html', {
-		'test1': test1,
-		'test2': test2,
-		'test3': test3
+		title, word, description, url = word_picker()
+	return render(request, 'landing_app/landing_page.html', {
+		'title': title,
+		'word': word,
+		'description': description,
+		'source': url
 		})

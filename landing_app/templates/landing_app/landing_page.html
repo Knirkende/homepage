@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
+{% extends 'landing_app/base.html' %}
 
-</body>
-</html>
+{% block main_body %}
+<div class="bg-dark text-light p-5 rounded-lg m-3 border border-1">
+	<h1 class="display-4">{{ word }}</h1>
+	<p class="lead">finnes kun ett sted i Ibsens dramatikk: i <i>{{ title }}</i>.</p>
+	<hr class="my-4">
+	<figure>
+		<blockquote>
+			<p>{{ description }}</p>
+		</blockquote>
+		<figcaption>
+			<p class="text-muted">{{ source }}</p>
+		</figcaption>
+	</figure>
+</div>
+{% endblock %}
